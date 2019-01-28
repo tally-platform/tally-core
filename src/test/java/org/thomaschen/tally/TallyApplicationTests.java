@@ -29,7 +29,8 @@ public class TallyApplicationTests {
             TestPropertyValues values = TestPropertyValues.of(
                     "spring.datasource.url=" + mySQLContainer.getJdbcUrl(),
                     "spring.datasource.username=" + mySQLContainer.getUsername(),
-                    "spring.datasource.password=" + mySQLContainer.getPassword()
+                    "spring.datasource.password=" + mySQLContainer.getPassword(),
+                    "spring.datasource.driver=" + mySQLContainer.getDriverClassName()
             );
         }
     }
