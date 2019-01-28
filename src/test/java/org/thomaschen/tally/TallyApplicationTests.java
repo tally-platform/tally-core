@@ -31,7 +31,7 @@ public class TallyApplicationTests {
                     "spring.datasource.url=" + mySQLContainer.getJdbcUrl(),
                     "spring.datasource.username=" + mySQLContainer.getUsername(),
                     "spring.datasource.password=" + mySQLContainer.getPassword(),
-                    "spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver"
+                    "spring.datasource.driver-class-name=" + mySQLContainer.getDriverClassName()
             );
         }
     }
