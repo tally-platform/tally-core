@@ -16,11 +16,12 @@ import org.testcontainers.containers.MySQLContainer;
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @ContextConfiguration(initializers = TallyApplicationTests.Initializer.class)
+//@ActiveProfiles("test")
 public class TallyApplicationTests {
 
     @ClassRule
     public static MySQLContainer mySQLContainer = new MySQLContainer()
-            .withUsername("inmnem")
+            .withUsername("inmem")
             .withPassword("inmem");
 
     public static class Initializer implements ApplicationContextInitializer<ConfigurableApplicationContext> {
@@ -30,7 +31,7 @@ public class TallyApplicationTests {
                     "spring.datasource.url=" + mySQLContainer.getJdbcUrl(),
                     "spring.datasource.username=" + mySQLContainer.getUsername(),
                     "spring.datasource.password=" + mySQLContainer.getPassword(),
-                    "spring.datasource.driver=" + mySQLContainer.getDriverClassName()
+                    "spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver"
             );
         }
     }
