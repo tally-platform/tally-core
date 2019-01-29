@@ -11,7 +11,7 @@ VOLUME /tmp
 EXPOSE 8080
 
 # The application's jar file
-ARG JAR_FILE=target/micro-core-0.0.1.jar
+ARG JAR_FILE=target/tally-0.0.0.jar
 
 # Add the application's jar to the container
 ADD ${JAR_FILE} tally-0.0.0.jar

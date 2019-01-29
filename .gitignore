@@ -26,3 +26,6 @@
 
 ### Spring ###
 application.properties
+
+### Maven Wrapper ###
+mvnw*
